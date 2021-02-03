@@ -101,7 +101,7 @@ input, select {
 }
 
 html {
-  background-color:#483d8b;
+  background-color:#9932cc;
 }
 * {
   color: white;
