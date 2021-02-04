@@ -73,14 +73,8 @@ export default {
    del(index){
      axios.delete(
        "https://frozen-headland-03525.herokuapp.com/api/todos/" +this.todolist[index].data.id
-     )
-     .then((response)=>{
-       console.log(response);
-       this.$router.go({
-         path:this.$router.currentRoute.path,
-         force:true,
-     });
-     });
+     );
+     
   },
   upd(newtodo,index){
     const newdata ={
