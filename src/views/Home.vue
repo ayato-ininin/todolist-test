@@ -77,8 +77,9 @@ export default {
      )
      .then((response)=>{
        console.log(response);
-       await this.getTodos();
+       
      });
+     await this.getTodos();
   },
   async upd(newtodo,index){
     const newdata ={
@@ -88,9 +89,9 @@ export default {
     )
     .then((response)=>{
        console.log(response);
-       await this.getTodos();
+       
      });
-
+    await this.getTodos();
   },
   },
   created(){
