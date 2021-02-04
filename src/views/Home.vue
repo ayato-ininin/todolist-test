@@ -38,11 +38,11 @@ export default {
     };
   },
   methods:{
-    send(){
+    async send(){
       if(this.todo===""){
         alert("内容を入力してください");
       }else{
-        axios.post("https://frozen-headland-03525.herokuapp.com/api/todos",{
+       await axios.post("https://frozen-headland-03525.herokuapp.com/api/todos",{
           todo:this.todo,
         })
         .then((response)=>{
@@ -70,17 +70,23 @@ export default {
       this.todolist=data;
       console.log(this.todolist);
    },
-   del(index){
-     axios.delete(
+   async del(index){
+     await axios.delete(
        "https://frozen-headland-03525.herokuapp.com/api/todos/" +this.todolist[index].data.id
-     );
-     
+     )
+     .then((response)=>{
+       console.log(response);
+       this.$router.go({
+         path:this.$router.currentRoute.path,
+         force:true,
+     });
+     });
   },
-  upd(newtodo,index){
+  async upd(newtodo,index){
     const newdata ={
       todo:newtodo,
     };
-    axios.put("https://frozen-headland-03525.herokuapp.com/api/todos/" + this.todolist[index].data.id,newdata
+    await axios.put("https://frozen-headland-03525.herokuapp.com/api/todos/" + this.todolist[index].data.id,newdata
     )
     .then((response)=>{
        console.log(response);
