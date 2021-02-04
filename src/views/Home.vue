@@ -149,6 +149,7 @@ p{
   border-radius: 5px;
   padding: 10px 15px;
   background-color: #fff;
+  outline: none
 }
 .btn1:hover{
   cursor: pointer;
@@ -164,6 +165,7 @@ p{
   padding: 10px 15px;
   background-color: #fff;
   margin-right: 7px;
+  outline: none
 }
 .btn2:hover{
   cursor: pointer;
@@ -178,6 +180,7 @@ p{
   border-radius: 5px;
   padding: 10px 15px;
   background-color: #fff;
+  outline: none
 }
 .btn3:hover{
   cursor: pointer;
