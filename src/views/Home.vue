@@ -53,6 +53,7 @@ export default {
             force:true,
           });
         });
+        await this.getTodos();
       }
     },
     async getTodos(){
@@ -76,10 +77,7 @@ export default {
      )
      .then((response)=>{
        console.log(response);
-       this.$router.go({
-         path:this.$router.currentRoute.path,
-         force:true,
-     });
+       await this.getTodos();
      });
   },
   async upd(newtodo,index){
@@ -90,10 +88,7 @@ export default {
     )
     .then((response)=>{
        console.log(response);
-       this.$router.go({
-         path:this.$router.currentRoute.path,
-         force:true,
-     });
+       await this.getTodos();
      });
 
   },
