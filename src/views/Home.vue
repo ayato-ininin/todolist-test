@@ -48,10 +48,7 @@ export default {
         .then((response)=>{
           console.log(response);
           this.todo="";
-          this.$router.go({
-            path:this.$router.currentRoute.path,
-            force:true,
-          });
+          
         });
         await this.getTodos();
       }
